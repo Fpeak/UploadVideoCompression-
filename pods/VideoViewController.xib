@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController">
+            <connections>
+                <outlet property="videoImage" destination="oDy-Xz-f5A" id="GWa-Jo-l0E"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta8-8g-czq">
+                    <rect key="frame" x="33" y="295" width="281" height="30"/>
+                    <color key="backgroundColor" red="0.85029987370000004" green="0.44759418899999998" blue="0.80202284970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="h6k-X3-2dq"/>
+                    </constraints>
+                    <state key="normal" title="选择视频"/>
+                    <connections>
+                        <action selector="chooseVideo:" destination="-1" eventType="touchUpInside" id="xqa-dH-49v"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDy-Xz-f5A">
+                    <rect key="frame" x="22" y="114" width="303" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="ike-ZF-IrW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频缩略图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVu-8O-Pcj">
+                    <rect key="frame" x="22" y="85" width="158" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="alM-tA-p6N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-hm-0rA">
+                    <rect key="frame" x="33" y="344" width="281" height="30"/>
+                    <color key="backgroundColor" red="0.55740751529999999" green="0.47567306500000001" blue="0.85029987370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="tVk-GZ-I6H"/>
+                    </constraints>
+                    <state key="normal" title="上传视频"/>
+                    <connections>
+                        <action selector="uploadVideo:" destination="-1" eventType="touchUpInside" id="cOh-UV-vht"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ta8-8g-czq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="26c-ls-ylx"/>
+                <constraint firstItem="NVu-8O-Pcj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="49A-jR-uck"/>
+                <constraint firstAttribute="trailing" secondItem="gf3-hm-0rA" secondAttribute="trailing" constant="61" id="DgN-YN-oId"/>
+                <constraint firstItem="NVu-8O-Pcj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="PCm-5f-0WZ"/>
+                <constraint firstItem="oDy-Xz-f5A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="PYf-mR-VBf"/>
+                <constraint firstItem="gf3-hm-0rA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="XVB-No-9mp"/>
+                <constraint firstItem="gf3-hm-0rA" firstAttribute="top" secondItem="Ta8-8g-czq" secondAttribute="bottom" constant="19" id="YgY-ag-Va0"/>
+                <constraint firstAttribute="trailing" secondItem="oDy-Xz-f5A" secondAttribute="trailing" constant="50" id="fUb-Tv-bM8"/>
+                <constraint firstAttribute="trailing" secondItem="Ta8-8g-czq" secondAttribute="trailing" constant="61" id="ixM-Bm-3V4"/>
+                <constraint firstAttribute="trailing" secondItem="NVu-8O-Pcj" secondAttribute="trailing" constant="195" id="v3i-wl-DA4"/>
+                <constraint firstItem="oDy-Xz-f5A" firstAttribute="top" secondItem="NVu-8O-Pcj" secondAttribute="bottom" constant="8" id="yJp-d8-3Xa"/>
+                <constraint firstItem="Ta8-8g-czq" firstAttribute="top" secondItem="oDy-Xz-f5A" secondAttribute="bottom" constant="19" id="zh9-cy-n3a"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
